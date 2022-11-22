@@ -1,0 +1,23 @@
+<Screen2>:
+    BoxLayout: 
+        orientation: 'vertical'
+        size: root.size
+        padding: 0.1 * root.width, 0.1 * root.width
+        spacing: 20
+
+        Label:
+            text: 'Please import an image with digits'
+            size_hint_y: 0.20
+
+        Image: 
+            id: picture
+            source: 'images/import.jpg'
+            allow_stretch: True
+            keep_ratio: True
+            size_hint_y: 0.60
+
+        RoundedButton:
+            text: 'Take Picture'
+            pos_hint: {'center_x': 0.5}
+            size_hint: (0.6, 0.10)
+            on_release: app.root.current = '3' 

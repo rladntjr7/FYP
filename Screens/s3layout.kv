@@ -1,0 +1,26 @@
+<S3Layout>:
+    orientation: 'vertical'
+    size: root.size
+    spacing: 20
+
+    Preview:
+        id: preview
+    
+    Label: 
+        size_hint_y: 0.1
+
+    RoundedButton:
+        text: 'Change Camera'
+        pos_hint: {'center_x': 0.5}
+        size_hint: (0.6, 0.1)
+        on_press: root.select_camera('toggle')
+
+    RoundedButton:
+        text: 'Take Picture'
+        pos_hint: {'center_x': 0.5}
+        size_hint: (0.6, 0.1)
+        on_press: root.capture()
+        on_release: app.root.current = '4'
+
+    Label: 
+        size_hint_y: 0.1

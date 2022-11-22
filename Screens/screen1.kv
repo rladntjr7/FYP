@@ -1,0 +1,36 @@
+<Screen1>:
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.size
+        padding: 0.1 * root.width, 0.1 * root.width
+        spacing: 10
+
+        Label:
+            text: 'FYP 22/23\nWooseok Kim\nDr. Liu Jun'
+            size_hint_y: 0.15
+
+        Image: 
+            source: 'images/main.jpg'
+            size_hint_y: 0.55
+
+        Label:
+            markup: True
+            text: 'Reads [b]handwritten numbers[/b]\nwith [b]Machine Learning[/b]'
+            size_hint_y: 0.20
+
+        RoundedButton:
+            text: 'Getting Started >'
+            pos_hint: {'center_x': 0.5}
+            size_hint: (0.6, 0.10)
+            on_release: app.root.current = '2' 
+
+<RoundedButton@Button>
+    background_color: (0,0,0,0)
+    background_normal: ''
+    canvas.before:
+        Color:
+            rgba: (198/255, 110/255, 200/255, 1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [10]

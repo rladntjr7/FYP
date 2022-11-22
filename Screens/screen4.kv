@@ -1,0 +1,35 @@
+<Screen4>
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.size
+        padding: 0.1 * root.width, 0.1 * root.width
+        spacing: 20
+
+        Label:
+            text: "Check Photo"
+            size_hint_y: 0.20
+
+        Image:
+            id: picture1
+            allow_stretch: True
+            keep_ratio: True
+            size_hint_y: 0.60
+        
+        RoundedButton:
+            text: "Analyse"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (0.6, 0.1)
+            on_press: root.analyse()
+
+        RoundedButton:
+            text: "Retake"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (0.6, 0.1)
+            on_release: app.root.current = '3'
+
+        RoundedButton:
+            text: "Back"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (0.6, 0.1)
+            on_release: app.root.current = '1'
+            
