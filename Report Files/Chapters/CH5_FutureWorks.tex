@@ -1,0 +1,34 @@
+\chapter{Future Works}
+Although this project successfully completed developing a program that can detect and track sperm cells very well, some limitations and challenges need to be addressed in future work. Some of the main areas of improvement are:
+
+\begin{itemize}
+    \item Dataset
+    \item Morphology Analysis
+    \item Model Optimization
+    \item Tracking Performance
+    \item Applications
+\end{itemize}
+
+\newpage
+\section{Dataset}
+This program relies on an artificial intelligence detection model trained by the images from the videos provided by the supervising professor. However, the number of images in the current dataset is 1400, which is not a large number by modern standards. Therefore, the model is prone to overfitting and might have lower detection rates when introduced in a new environment. 
+
+Although data augmentation was implemented to mitigate this issue, more data is always better in machine learning if the quality is decent. More data can be collected from different sources and environments. This can improve the detection model's reliability and robustness for real-world applications.
+
+\section{Morphology Analysis}
+In this project, only the motility of the sperm was assessed. However, sperm morphology is also essential in assessing sperm quality and fertility because abnormal sperm morphology can affect the sperm's ability to fertilize an egg.
+
+In future work, the detection model will be trained from a multi-class dataset containing the labels of normal and abnormal sperms. The detection model will now be able to detect the location of the sperm as well as the morphological information of the detected sperm. This can provide a more persuasive and practical result for the users of the program.
+
+\section{Model Optimization}
+The detection model used in this project is a small-sized version of YOLOv8, a state-of-the-art object detection model. However, there is still room for optimization and improvement. For example, Zhu et al. developed YOLOv5s-SA, a modified version of YOLOv5 with a lightweight structure and enhanced performance. \cite{deep7} By integrating specialized modules for sperm detection into the conventional YOLO model, the performance can be drastically improved. 
+
+Moreover, more effort can be put into optimizing the hyperparameters. In this project, only a few hyperparameters were tuned, whereas YOLOv8 has over 50 tunable hyperparameters. If a sufficient amount of computational resources is provided, the model can further be optimized to its task and have better performance in detecting and tracking.
+
+\section{Tracking Performance}
+The tracking algorithm used in this project is based on the Kalman filter. It works well in most cases but still has some limitations and challenges. For instance, the tracking algorithm can lose track of some sperm when they move too fast or occlude each other. Also, the tracking algorithm has less performance when the image is blurry. 
+
+In future work, the tracking performance can be improved using more advanced algorithms or methods. For example, deep learning-based tracking methods can be explored, such as recurrent neural networks (RNN). RNNs specialize in sequential data types, such as text and sound. As videos are also sequences of images, RNNs will also perform well in this field. This method will improve the tracking performance of this program since more flexibility can be expected from deep learning models than traditional algorithmic approaches.
+
+\section{Applications}
+This project has demonstrated that a program that detects and tracks sperm cells is feasible and useful. However, many potential applications can be developed based on this program. For example, the program can be integrated with a smartphone app or a web platform to provide real-time feedback and analysis for users who want to test their sperm quality at home. The program can also be used for research purposes to study the effects of different factors on sperm motility and morphology, such as temperature, pH, drugs, etc. The program can also be extended to detect and track other types of cells or microorganisms with similar characteristics to sperm cells.

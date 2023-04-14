@@ -1,0 +1,52 @@
+\documentclass[12pt]{report}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage[a4paper]{geometry}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage[justification=centering]{caption}
+\usepackage{multirow}
+\usepackage[export]{adjustbox}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\hyphenpenalty=7000
+
+\begin{document}
+\input{title}
+
+\chapter*{Abstract}
+This project aimed to develop a real-time tracking system for sperm cells from microscopic videos using various machine learning and computer vision techniques. This system was able to detect and track tens of sperm cells simultaneously from the videos and assess their motility based on their velocities. Then, the system evaluates the overall fertility of the specimen based on the ratio of the number of healthy sperm cells over the number of total sperm cells.
+
+Python language was implemented for this project for general operations, including importing and exporting the videos and processing the frames. For object detection, the state-of-the-art model YOLOv8 was used, and the model was trained and tested using the sperm specimen videos provided by the supervising professor. For tracking of the sperm cells, Kalman filters were implemented to accurately track each sperm cell when many sperm cells occasionally collide with each other or become undetected by the artificial intelligence model, making the tracking process harder.
+
+This system has various potential applications, including fertility clinics or animal breeding facilities, to improve their productivity. This report also contains possible future works to improve the system's robustness and reliability.
+
+The program is available online at \href{https://github.com/rladntjr7/FYP}{\underline{GitHub}}.
+
+
+\chapter*{Acknowledgments}
+First and foremost, I want to express my appreciation to Dr. Liu for providing guidance and support throughout my final year project. He has invested a lot of resources and time in his students. 
+
+I also want to thank Mr. Wei Dai, a Ph.D. candidate under Dr. Liu, who gave some practical advice for beginning the journey of machine learning and computer science. 
+
+Last but not least, I want to express my gratitude to my friends and classmates, especially Mr. Min Joong Kim and Mr. Injae Song. Although we did not have the same project topics, we still had a lot of fruitful times discussing each others' projects, and this project could not have been finished without their support.
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\include{Chapters/CH1_Introduction}
+\include{Chapters/CH2_LiteratureReview}
+\include{Chapters/CH3_Methodology}
+\include{Chapters/CH4_Results}
+\include{Chapters/CH5_FutureWorks}
+\include{Chapters/CH6_Conclusion}
+\appendix
+
+\bibliographystyle{ieeetr}
+\bibliography{references}
+
+\end{document}

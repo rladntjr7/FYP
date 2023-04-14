@@ -1,0 +1,26 @@
+\chapter{Introduction}
+Sperm analysis is an essential technique for evaluating male fertility and reproductive health. It involves measuring various parameters of sperm quality, such as motility, morphology, concentration, and viability. However, conventional methods of sperm analysis are often time-consuming, labor-intensive, subjective, and prone to errors.\cite{anti-conv} Therefore, there is a need to develop more efficient and accurate systems for sperm analysis using computer vision and machine learning techniques.
+
+One of the challenges in sperm analysis is to track the movements of individual sperm cells in a video sequence and extract their dynamic features. This can provide valuable information about the sperm's health and potential to fertilize an egg. However, tracking multiple sperm cells in a cluttered and noisy environment is not a trivial task, as it requires dealing with occlusions, collisions, low contrast, and high density of sperm cells.\cite{difficulties}
+
+Several methods have been proposed in the literature to address this problem, using traditional computer vision approaches such as edge detecting, clustering, thresholding, etc. While these methods have the advantage of a relatively lower computational cost, they still have limitations, such as lower flexibility to the image quality. They also have lower performance in detecting blurry sperm cells that are not perfectly focused by the camera. Moreover, they often require manual tuning of parameters and are sensitive to noise and occlusion. These drawbacks limit their applicability to specific types of sperm samples under perfect conditions.
+
+This project aims to develop a system providing a viable solution to the described difficulties above, developing a machine learning-based program to accurately and effectively detect and track the movements of sperm cells.
+\section{Problem Statement}
+The main problem of this project is to design and implement a machine learning-based system for sperm analysis that can overcome the limitations of the existing methods. Specifically, the system should be able to:
+\begin{itemize}
+    \item Detect and segment sperm cells from microscopic video files using a deep neural network that can handle various image qualities and sperm densities.
+    \item Track the trajectories of individual sperm cells using tracking algorithms that can cope with occlusions and collisions.
+    \item Extract and analyze the dynamic features of sperm cells, such as velocity and straightness, to assess the overall motility of the specimen.
+\end{itemize}
+\section{Project Objectives}
+To solve the above problems, there were a set of objectives set from the early stage of this project. The objectives are:
+\begin{itemize}
+    \item To gain a basic understanding of computer science and project development with Python.
+    \item To learn the foundations of the deep learning models, starting with making them from scratch with matrix calculations and with popular deep learning frameworks such as PyTorch and TensorFlow.
+    \item To learn how to develop a machine learning project, including dataset generation, proper model selection, and hyperparameter tuning.
+    \item To learn the principles of object tracking algorithms using the Kalman filter.
+    \item To learn the criteria of a healthy sperm cell based on its movement.
+\end{itemize}
+\section{Report Outline}
+This report will consist of 6 chapters. After this introduction of the report, there will be a literature review, where the previous works on machine learning and sperm analysis will be discussed. In Chapter 3, the methodology used to solve this project's problem will be discussed in more detail. In Chapter 4, the performance of the developed deep learning model and the tracking system will be assessed. In Chapter 5, the limitations of the system and the ways to improve them will be discussed. At last, the report will be finished with a conclusion followed by a bibliography.
