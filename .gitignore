@@ -1,0 +1,6 @@
+# ignore the virtual environment directory
+venv/
+
+# ignore cache directory
+__pycache__/
+
