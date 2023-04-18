@@ -9,7 +9,7 @@ def min_distance_index(sperm, crds):
     for crd in crds:
         dist = np.sqrt((sperm_x - crd[0].item()) ** 2 + (sperm_y - crd[1].item()) ** 2)
         distances.append(dist)
-
+    
     return distances.index(min(distances)), min(distances)
 
 def draw_lines(history, frame):
